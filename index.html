@@ -24,6 +24,8 @@
   --band-line: rgba(244, 236, 221, .28);
   --stage: #2A211B;
   --focus: #9C7A3A;
+  --logo-plate: #F4ECDD;
+  --logo-ink: #4A3E36;
 
   --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
   --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -85,6 +87,20 @@ a:hover { text-decoration-thickness: 2px; }
   text-transform: uppercase;
 }
 .rule { width: 92px; height: 2px; background: var(--brand); }
+
+/* Logot. Pohja pysyy vaaleana myös tummassa teemassa, koska logot ovat omissa väreissään. */
+.logos { background: var(--logo-plate); }
+.logos .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px clamp(16px, 3vw, 28px);
+  padding-block: 18px;
+}
+.logos img { display: block; width: auto; max-width: 100%; }
+.logos .logo-bc { height: clamp(22px, 3.2vw, 30px); }
+.logos .logo-tredu { height: clamp(28px, 4vw, 38px); }
+.logos span { color: var(--logo-ink); font-family: var(--serif); font-weight: 300; font-size: 1.5rem; line-height: 1; }
 
 /* Kansi */
 .cover {
@@ -270,9 +286,17 @@ footer p { margin: 0; }
 
 </head>
 <body>
-<header class="cover">
+<header>
+  <div class="logos">
+    <div class="wrap">
+      <img class="logo-bc" src="logot/bc.svg" width="349" height="54" alt="Business College Helsinki">
+      <span aria-hidden="true">×</span>
+      <img class="logo-tredu" src="logot/tredu.png" width="1729" height="522" alt="Tredu">
+    </div>
+  </div>
+  <div class="cover">
   <div class="wrap">
-    <p class="caps">Business College Helsinki × Tredu · 12.11.2026</p>
+    <p class="caps">Esitysaineistot · 12.11.2026</p>
     <div class="rule"></div>
     <h1>Joustava opiskeluryhmä <em>ja tekoäly erityisen tuen apuna</em></h1>
     <p class="lead">Tällä sivulla ovat Tredulle pidetyn esityksen aineistot. Ensimmäisenä on Joustavan opiskeluryhmän esittely. Sen jälkeen on video siitä, miten käytämme tekoälyä erityisen tuen apuna.</p>
@@ -281,6 +305,7 @@ footer p { margin: 0; }
       <li><a href="#video">Esteiden raivaajat</a> <span>· video, noin 7 min</span></li>
       <li><a href="#linkit">Kokeile itse ja katso lisää</a></li>
     </ul>
+  </div>
   </div>
 </header>
 
