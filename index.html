@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tredulle 12.11.2026 pidetyn esityksen aineistot: Joustavan opiskeluryhmän diaesitys ja Esteiden raivaajat -video.">
+<meta name="robots" content="noindex">
+<title>Business College × Tredu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap">
+<style>
+/* Layout: viininpunainen kansikaista, sen alla yksi 1120 px:n palsta. Jokainen osio alkaa
+   lyhyellä viivalla, versaaliotsakkeella ja kursiivilla serif-otsikolla, kuten Joustava-esityksen diat.
+   Ei pyöristyksiä, ei varjoja. */
+:root {
+  --bg: #F4ECDD;
+  --bg-2: #EADFC9;
+  --ink: #1F1813;
+  --ink-soft: #4A3E36;
+  --brand: #69013B;
+  --hairline: rgba(31, 24, 19, .16);
+  --band: #69013B;
+  --on-band: #F4ECDD;
+  --on-band-soft: rgba(244, 236, 221, .84);
+  --band-line: rgba(244, 236, 221, .28);
+  --stage: #2A211B;
+  --focus: #9C7A3A;
+
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display-lh: 1.12; /* Ä- ja Ö-pisteet eivät saa osua ylempään riviin */
+  --col: 1120px;
+  --gutter-l: max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(20px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B1511;
+    --bg-2: #2A211B;
+    --ink: #F4ECDD;
+    --ink-soft: #CDBFA8;
+    --brand: #EBAACB;
+    --hairline: rgba(244, 236, 221, .2);
+    --stage: #0F0C0A;
+    --focus: #D9B872;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1511;
+  --bg-2: #2A211B;
+  --ink: #F4ECDD;
+  --ink-soft: #CDBFA8;
+  --brand: #EBAACB;
+  --hairline: rgba(244, 236, 221, .2);
+  --stage: #0F0C0A;
+  --focus: #D9B872;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: calc(var(--col) + var(--gutter-l) + var(--gutter-r));
+  margin: 0 auto;
+  padding-left: var(--gutter-l);
+  padding-right: var(--gutter-r);
+}
+a { color: var(--brand); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.caps {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.rule { width: 92px; height: 2px; background: var(--brand); }
+
+/* Kansi */
+.cover {
+  background:
+    radial-gradient(100% 80% at 100% 0%, rgba(0, 0, 0, .22), transparent 60%),
+    radial-gradient(60% 60% at 0% 100%, rgba(255, 225, 180, .08), transparent 60%),
+    var(--band);
+  color: var(--on-band);
+}
+.cover .wrap { padding-block: clamp(40px, 7vw, 84px) clamp(32px, 5vw, 56px); }
+.cover .caps { color: var(--on-band-soft); }
+.cover .rule { background: var(--on-band); margin: 22px 0 28px; }
+.cover h1 {
+  margin: 0;
+  max-width: 17ch;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.3rem, 6.4vw, 4.6rem);
+  line-height: var(--display-lh);
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.cover h1 em { font-style: italic; }
+.cover .lead {
+  margin: 26px 0 0;
+  max-width: 60ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--on-band-soft);
+}
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 36px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--band-line);
+  list-style: none;
+  font-size: 15px;
+}
+.toc a { color: var(--on-band); text-decoration: none; border-bottom: 1px solid var(--band-line); padding-bottom: 2px; }
+.toc a:hover { border-bottom-color: var(--on-band); }
+.toc span { color: var(--on-band-soft); }
+
+/* Osiot */
+main { display: flex; flex-direction: column; gap: clamp(56px, 8vw, 96px); padding-block: clamp(48px, 7vw, 80px); }
+.sec-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.sec-head .caps { color: var(--ink-soft); margin-top: 8px; }
+.sec-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  line-height: var(--display-lh);
+  letter-spacing: -.012em;
+  color: var(--brand);
+  text-wrap: balance;
+}
+.sec-head p.body { margin: 4px 0 0; max-width: 64ch; font-size: 1.08rem; }
+
+/* Upotukset */
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: var(--stage);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+}
+.stage iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.stage--deck { aspect-ratio: 16 / 9; }
+.stage--video { height: clamp(560px, 82vh, 860px); }
+.stage:fullscreen { width: 100vw; height: 100vh; aspect-ratio: auto; border: 0; }
+.stage-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-top: 14px;
+}
+.hint { margin: 0; min-width: 0; max-width: 62ch; font-size: 15px; color: var(--ink-soft); }
+.btn {
+  flex: none;
+  padding: 10px 18px;
+  border: 1px solid var(--brand);
+  background: transparent;
+  color: var(--brand);
+  font: 600 14px/1.2 var(--sans);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--brand); color: var(--bg); }
+.btn:disabled { opacity: .4; cursor: default; background: transparent; color: var(--brand); }
+.deck-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.deck-count { min-width: 5.5ch; text-align: center; font-size: 15px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.hint--below { margin-top: 12px; }
+
+/* Ryhmä lyhyesti */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px clamp(28px, 5vw, 72px);
+  margin-top: 44px;
+}
+.fact { border-top: 2px solid var(--brand); padding-top: 20px; min-width: 0; }
+.fact b {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.025em;
+  color: var(--brand);
+  white-space: nowrap;
+}
+.fact span { display: block; margin-top: 12px; max-width: 26ch; }
+
+/* Videon luvut */
+.chapters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(28px, 5vw, 72px);
+  margin: 40px 0 0;
+  border-top: 1px solid var(--hairline);
+}
+.chapters div { padding: 18px 0; border-bottom: 1px solid var(--hairline); min-width: 0; }
+.chapters dt {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--brand);
+}
+.chapters dd { margin: 6px 0 0; color: var(--ink-soft); }
+
+/* Linkit */
+.links { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--hairline); }
+.links li {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 6px clamp(20px, 4vw, 56px);
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.links a {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.links p { margin: 0; min-width: 0; color: var(--ink-soft); }
+.links .host { display: block; margin-top: 4px; font-size: 14px; letter-spacing: .02em; overflow-wrap: anywhere; }
+
+footer { border-top: 1px solid var(--hairline); }
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-block: 28px 36px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+footer p { margin: 0; }
+
+@media (max-width: 720px) {
+  .facts { grid-template-columns: 1fr; }
+  .chapters { grid-template-columns: 1fr; }
+  .links li { grid-template-columns: 1fr; }
+  .stage--video { height: clamp(520px, 86vh, 760px); }
+  .deck-nav { flex-wrap: nowrap; gap: 8px; }
+  .deck-nav .btn { padding: 10px 11px; font-size: 13px; letter-spacing: .03em; }
+}
+</style>
+
+</head>
+<body>
+<header class="cover">
+  <div class="wrap">
+    <p class="caps">Business College Helsinki × Tredu · 12.11.2026</p>
+    <div class="rule"></div>
+    <h1>Joustava opiskeluryhmä <em>ja tekoäly erityisen tuen apuna</em></h1>
+    <p class="lead">Tällä sivulla ovat Tredulle pidetyn esityksen aineistot. Ensimmäisenä on Joustavan opiskeluryhmän esittely. Sen jälkeen on video siitä, miten käytämme tekoälyä erityisen tuen apuna.</p>
+    <ul class="toc">
+      <li><a href="#esitys">Joustava opiskeluryhmä</a> <span>· 15 diaa</span></li>
+      <li><a href="#video">Esteiden raivaajat</a> <span>· video, noin 7 min</span></li>
+      <li><a href="#linkit">Kokeile itse ja katso lisää</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="esitys">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <p class="caps">Diaesitys · 15 diaa</p>
+      <h2>Joustava opiskeluryhmä</h2>
+      <p class="body">Joustava on Business College Helsingin tieto- ja viestintätekniikan perustutkinnon opiskeluryhmä. Ryhmässä suoritetaan sama tutkinto ja tavoitellaan samaa osaamista kuin muissakin ryhmissä. Joustavuus näkyy tahdissa, työskentelytavoissa ja ohjauksessa.</p>
+    </div>
+    <div class="stage stage--deck" id="deck-stage">
+      <iframe id="deck-frame" src="joustava.html" title="Joustava opiskeluryhmä, diaesitys" allow="fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="stage-bar">
+      <div class="deck-nav" id="deck-nav" hidden>
+        <button class="btn" type="button" id="deck-prev">← Edellinen</button>
+        <span class="deck-count" id="deck-count" aria-live="polite">1 / 15</span>
+        <button class="btn" type="button" id="deck-next">Seuraava →</button>
+      </div>
+      <button class="btn" type="button" id="deck-fs">Koko näyttö</button>
+    </div>
+    <p class="hint hint--below">Diat vaihtuvat myös nuolinäppäimillä, kun napsautat ensin diaa.</p>
+    <div class="facts">
+      <div class="fact"><b>~60</b><span>opiskelijaa ryhmässä</span></div>
+      <div class="fact"><b>noin ½</b><span>tarvitsee erityistä tukea</span></div>
+      <div class="fact"><b>2</b><span>opettajaa koko ajan mukana: ammatillinen opettaja ja ammatillinen erityisopettaja</span></div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <p class="caps">Video · noin 7 min</p>
+      <h2>Esteiden raivaajat</h2>
+      <p class="body">Video erityisestä tuesta ja työkaluista, joilla raivaamme oppimisen esteitä. Videon luvut ovat tiivistettynä sen alla.</p>
+    </div>
+    <div class="stage stage--video" id="video-stage">
+      <iframe id="video-frame" src="esteiden-raivaajat.html" title="Esteiden raivaajat, video" allow="fullscreen; autoplay" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="stage-bar">
+      <p class="hint">Jos video ei mahdu ruutuun, avaa se omassa välilehdessä.</p>
+      <a class="btn" href="https://seise.org/esitykset/esteiden-raivaajat/" target="_blank" rel="noopener">Avaa omassa välilehdessä</a>
+    </div>
+    <dl class="chapters">
+      <div><dt>Missä jumittuu</dt><dd>Vaikeus ei aina ole asian ymmärtämisessä.</dd></div>
+      <div><dt>Eriyttäminen</dt><dd>Sama tavoite, opiskelijalle sopiva tehtävänanto.</dd></div>
+      <div><dt>Eriyttäminen ylöspäin</dt><dd>Nopeampi tahti ja haastavampi sisältö, samat kriteerit.</dd></div>
+      <div><dt>Viikkopolku</dt><dd>Oma viikkoaikataulu monesta oppimiskokonaisuudesta.</dd></div>
+      <div><dt>Näyttöprojekti</dt><dd>Opiskelijan oma projektisivusto näyttöä varten.</dd></div>
+      <div><dt>Tuki rakenteessa</dt><dd>Tuki ei leimaa, eikä tavoitteista tingitä.</dd></div>
+    </dl>
+  </section>
+
+  <section id="linkit">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <p class="caps">Linkit</p>
+      <h2>Kokeile itse ja katso lisää</h2>
+    </div>
+    <ul class="links">
+      <li>
+        <a href="https://mattiseise.github.io/henkilokohtaisetopintopolut/demo/" target="_blank" rel="noopener">Viikkopolun demo</a>
+        <p>Opiskelijan oma viikkoaikataulu. Demon opiskelija ja oppimiskokonaisuus ovat keksittyjä.<span class="host">mattiseise.github.io/henkilokohtaisetopintopolut/demo</span></p>
+      </li>
+      <li>
+        <a href="https://mattiseise.github.io/projektikoontisivu/" target="_blank" rel="noopener">Näyttöprojektien koontisivu</a>
+        <p>Toteutetut näyttöprojektit yhdessä paikassa. Jokaisella projektilla on oma ohjattu sivustonsa.<span class="host">mattiseise.github.io/projektikoontisivu</span></p>
+      </li>
+      <li>
+        <a href="https://seise.org/esitykset/agenttiputki/" target="_blank" rel="noopener">Pedagoginen agenttiputki</a>
+        <p>Video siitä, miten tekoälyagentit suunnittelevat, rakentavat ja tarkastavat opetusmateriaalia ja miksi opettaja hyväksyy jokaisen julkaistavan sisällön.<span class="host">seise.org/esitykset/agenttiputki</span></p>
+      </li>
+      <li>
+        <a href="https://seise.org/esitykset/opettajan-apurit/" target="_blank" rel="noopener">Opettajan apurit</a>
+        <p>Video pienistä apureista, jotka on tehty tekoälyn avulla helpottamaan opettajan työtä Wilmassa ja itslearningissa.<span class="host">seise.org/esitykset/opettajan-apurit</span></p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Matti Seise · Business College Helsinki</p>
+    <p>Yhteydenotto: <a href="https://seise.org/" target="_blank" rel="noopener">seise.org</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('deck-fs');
+  var stage = document.getElementById('deck-stage');
+  var frame = document.getElementById('deck-frame');
+  if (!btn || !stage) return;
+  if (!stage.requestFullscreen || document.fullscreenEnabled === false) { btn.hidden = true; return; }
+  btn.addEventListener('click', function () {
+    if (document.fullscreenElement) { document.exitFullscreen(); return; }
+    var p = stage.requestFullscreen();
+    if (p && p.then) {
+      p.then(function () { try { frame.focus(); } catch (e) {} })
+       .catch(function () { btn.hidden = true; });
+    }
+  });
+  document.addEventListener('fullscreenchange', function () {
+    btn.textContent = document.fullscreenElement ? 'Poistu koko näytöstä' : 'Koko näyttö';
+  });
+})();
+
+/* Omat diapainikkeet. Esityksen muokkausraita piilotetaan, koska sivu on katselua varten. */
+(function () {
+  var frame = document.getElementById('deck-frame');
+  var nav = document.getElementById('deck-nav');
+  var prev = document.getElementById('deck-prev');
+  var next = document.getElementById('deck-next');
+  var count = document.getElementById('deck-count');
+  if (!frame || !nav) return;
+  var deck = null, tries = 0;
+  function findDeck() {
+    try {
+      var d = frame.contentDocument;
+      var el = d && d.querySelector('deck-stage');
+      return el && typeof el.next === 'function' ? el : null;
+    } catch (e) { return null; }
+  }
+  function sync() {
+    if (!deck) return;
+    var i = deck.index, n = deck.length;
+    if (typeof i !== 'number' || typeof n !== 'number') return;
+    count.textContent = (i + 1) + ' / ' + n;
+    prev.disabled = i <= 0;
+    next.disabled = i >= n - 1;
+  }
+  var timer = setInterval(function () {
+    var el = findDeck();
+    if (el) {
+      clearInterval(timer);
+      deck = el;
+      try { el.setAttribute('no-rail', ''); } catch (e) {}
+      try { frame.contentDocument.addEventListener('slidechange', function () { setTimeout(sync, 0); }); } catch (e) {}
+      nav.hidden = false;
+      sync();
+    } else if (++tries > 150) {
+      clearInterval(timer);
+    }
+  }, 200);
+  prev.addEventListener('click', function () { if (deck) { deck.prev(); setTimeout(sync, 0); } });
+  next.addEventListener('click', function () { if (deck) { deck.next(); setTimeout(sync, 0); } });
+})();
+</script>
+</body>
+</html>
